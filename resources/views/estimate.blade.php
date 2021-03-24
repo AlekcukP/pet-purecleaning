@@ -13,12 +13,7 @@
                         <option value="2">2 Bedroom</option>
                         <option value="3">3 Bedroom</option>
                         <option value="4">4 Bedroom</option>
-                        <option value="5">5 Bedroom</option>
-                        <option value="6">6 Bedroom</option>
-                        <option value="7">7 Bedroom</option>
-                        <option value="8">8 Bedroom</option>
-                        <option value="9">9 Bedroom</option>
-                        <option value="10">10 Bedroom</option>
+                        <option value="5">5+ Bedroom</option>
                     </select>
                 </div>
                 <div class="estimate_select_bathroom">
@@ -32,7 +27,7 @@
                         <option value="3.5">3.5 Bathroom</option>
                         <option value="4">4 Bathroom</option>
                         <option value="4.5">4.5 Bathroom</option>
-                        <option value="5">5 Bathroom</option>
+                        <option value="5">5+ Bathroom</option>
                     </select>
                 </div>
             </div>
