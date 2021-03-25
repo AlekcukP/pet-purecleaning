@@ -1,99 +1,13 @@
-extends(layouts.base)
+@extends('layouts.base_step')
 
-@section('content')
-    <nav class="steps_nav">
-        <ul class="steps_list">
-            <li class="steps_item">
-                <span>Personal info</span>
-            </li>
-            <li class="steps_item">
-                <span>Your home</span>
-            </li>
-            <li class="steps_item">
-                <span>Materials</span>
-            </li>
-            <li class="steps_item">
-                <span>Extras</span>
-            </li>
-        </ul>
-    </nav>
-    <section class="step_one">
-        <div class="step_inform">
-            <div class="step_inform_header">
-                <h4>Let's start with some basic information</h4>
-            </div>
-            <div class="step_inform_text">
-                <p>At the end of the quote you will get a price for cleaning</p>
-            </div>
-        </div>
-        <div class="step_item">
-            <div class="step_item_container">
-                <div class="step_item_type">
-                    <h3>Cleaning frequency</h3>
-                </div>
-                <div class="step_item_content">
-                    <div class="steps_item_content_row">
-                        <div class="step_item_header">
-                            <h5>How often would you like us to come?</h5>
-                        </div>
-                        <div class="step_item_text">
-                            <p>You can always change frequencies, reschedule, or save cleanings for later!</p>
-                        </div>
-                        <fieldset class="step_item_btns">
-                            <div class="radio">
-                                <label for="frequency_once">Once</label>
-                                <input type="radio" name="once" id="frequency_once">
-                            </div>
-                            <div class="radio">
-                                <label for="frequency_weekly">Weekly</label>
-                                <input type="radio" name="weekly" id="frequency_weekly">
-                            </div>
-                            <div class="radio">
-                                <label for="frequency_biweekly">Bi-weekly</label>
-                                <input type="radio" name="biweekly" id="frequency_biweekly">
-                            </div>
-                            <div class="radio">
-                                <label for="frequency_monthly">Monthly</label>
-                                <input type="radio" name="monthly" id="frequency_monthly">
-                            </div>
-                        </fieldset>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </div>
-        <div class="step_item">
-            <div class="step_item_container">
-                <div class="step_item_type">
-                    <h3>Cleaning type</h3>
-                </div>
-                <div class="step_item_content">
-                    <div class="steps_item_content_row">
-                        <div class="step_item_header">
-                            <h5>What type of cleaning?</h5>
-                        </div>
-                        <fieldset class="step_item_btns">
-                            <div class="radio">
-                                <label for="type_deep">Deep or Spring</label>
-                                <input type="radio" name="deep" id="type_deep">
-                            </div>
-                            <div class="radio">
-                                <label for="type_movein">Move In</label>
-                                <input type="radio" name="movein" id="type_movein">
-                            </div>
-                            <div class="radio">
-                                <label for="type_moveout">Move Out</label>
-                                <input type="radio" name="moveout" id="type_moveout">
-                            </div>
-                            <div class="radio">
-                                <label for="type_remodeling">Post Remodeling</label>
-                                <input type="radio" name="remodeling" id="type_remodeling">
-                            </div>
-                        </fieldset>
-                    </div>
-                </div>
-            </div>
-        </div>
+@section('step_header', 'Lets start with some basic information')
+@section('step_text', 'At the end of the quote you will get a price for cleaning')
+
+@section('step_content')
+
+        @include('layouts.frequency')
+        @include('layouts.type')
+
         <div class="step_item">
             <div class="step_item_container">
                 <div class="step_item_type">
@@ -188,9 +102,6 @@ extends(layouts.base)
                                         <option value="Google">Google</option>
                                         <option value="Yelp">Yelp</option>
                                         <option value="Facebook">Facebook</option>
-                                        <option value="Angie\'s List">Angie's List</option>
-                                        <option value="Nextdoor">Nextdoor</option>
-                                        <option value="Fresh Chalk">Fresh Chalk</option>
                                         <option value="Bing/Yahoo">Bing/Yahoo</option>
                                         <option value="Other">Other</option>
                                     </select>

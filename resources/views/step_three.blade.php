@@ -1,3 +1,6 @@
+extends(layouts.base)
+
+@section('content')
 <section class="step_three">
     <div class="step_inform">
         <div class="step_inform_header">
@@ -102,3 +105,4 @@
         </div>
     </div>
 </section>
+@endsection

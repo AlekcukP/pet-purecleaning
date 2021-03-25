@@ -1,4 +1,4 @@
-@extends('main')
+@extends('layouts.base')
 
 @section('content')
     <section class="estimate">
@@ -46,23 +46,21 @@
             </div>
         </form>
     </section>
-@endsection
 
-@section('footer')
-    <footer>
-        <div class="footer_benefits">
-            <ul class="footer_benefits_list">
+    <section class="achivments">
+        <div class="achivments_benefits">
+            <ul class="achivments_benefits_list">
                 <li>Experienced and vetted professionals</li>
                 <li>Flexible cleaning schedule</li>
                 <li>Cleaning supplies included</li>
             </ul>
         </div>
-        <div class="footer_rated">
-            <h3 class="footer_rated_header">Our services are being rated</h3>
-            <ul class="footer_rated_list">
+        <div class="achivments_rated">
+            <h3 class="achivments_rated_header">Our services are being rated</h3>
+            <ul class="achivments_rated_list">
                 <li><span>Grade</span>on <img src="#" alt="Angies list"></li>
                 <li><span>Stars</span>on <img src="#" alt="Yelp"></li>
             </ul>
         </div>
-    </footer>
+    </section>
 @endsection

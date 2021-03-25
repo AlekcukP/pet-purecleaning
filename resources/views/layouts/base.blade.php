@@ -16,8 +16,16 @@
         </div>
     </header>
     <main>
-        @yield('content');
+        @section('content')
+        @show
     </main>
-    @yield('footer');
+    <footer class="footer">
+        <ul class="footer_links">
+            <li><a href="">Privacy Policy</a></li>
+            <li><a href="">Terms of Service</a></li>
+            <li><a href=""></a>Cancellation Policy</li>
+        </ul>
+        <p>2021 Pure House Cleaning. All rights reserved</p>
+    </footer>
 </body>
 </html>
