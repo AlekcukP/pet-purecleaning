@@ -1,26 +1,9 @@
 @extends('layouts.base')
 
 @section('content')
-    @section('step_tabs')
-    <nav class="steps_nav">
-        <ul class="steps_list">
-            <li class="steps_item">
-                <span>Personal info</span>
-            </li>
-            <li class="steps_item">
-                <span>Your home</span>
-            </li>
-            <li class="steps_item">
-                <span>Materials</span>
-            </li>
-            <li class="steps_item">
-                <span>Extras</span>
-            </li>
-        </ul>
-    </nav>
-    @show
+    <x-step-navigation></x-step-navigation>
     <section class="step">
-        <div class="step_inform">
+        <article class="step_inform">
                 <div class="step_inform_header">
                     <h4>
                     @section('step_header')
@@ -29,12 +12,14 @@
                 </div>
                 <div class="step_inform_text">
                     <p>
-                    @section('step_text')
+                    @section('step_description')
                     @show
                     </p>
                 </div>
-        </div>
+        </article>
+        <section class="step_content">
         @section('step_content')
         @show
+        </section>
     </section>
 @endsection

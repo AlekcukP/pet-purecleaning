@@ -1,108 +1,54 @@
-extends(layouts.base)
+@extends('layouts.base_step')
 
-@section('content')
-<section class="step_three">
-    <div class="step_inform">
-        <div class="step_inform_header">
-            <h4>Now we need information about your home</h4>
-        </div>
-        <div class="step_inform_text">
-            <p>This information will be used to prepare for a cleaning</p>
-        </div>
-    </div>
-    <div class="step_item">
-        <div class="step_item_container">
-            <div class="step_item_type">
-                <h3>Home surpaces</h3>
-            </div>
-            <div class="step_item_content">
-                <div class="steps_item_content_row">
-                    <div class="step_item_header">
-                        <h5>What types of flooring in your home?</h5>
-                    </div>
-                    <div class="step_item_text">
-                        <p>Check all that apply</p>
-                    </div>
-                    <fieldset class="step_item_checkboxes">
-                        <div class="checkbox">
-                            <label for=""></label>
-                            <span></span>
-                            <input type="checkbox" name="" id="">
-                        </div>
-                    </fieldset>
-                </div>
-                <div class="steps_item_content_row">
-                    <div class="step_item_header">
-                        <h5>?</h5>
-                    </div>
-                    <div class="step_item_text">
-                        <p>!</p>
-                    </div>
-                    <fieldset class="step_item_btns">
-                        <div class="radio">
-                            <label for=""></label>
-                            <input type="radio" name="" id="">
-                        </div>
-                    </fieldset>
-                </div>
-                <div class="steps_item_content_row">
-                    <div class="step_item_header">
-                        <h5>?</h5>
-                    </div>
-                    <div class="step_item_text">
-                        <p>!</p>
-                    </div>
-                    <fieldset class="step_item_btns">
-                        <div class="radio">
-                            <label for=""></label>
-                            <input type="radio" name="" id="">
-                        </div>
-                    </fieldset>
-                </div>
-                <div class="steps_item_content_row">
-                    <div class="step_item_header">
-                        <h5>?</h5>
-                    </div>
-                    <div class="step_item_text">
-                        <p>!</p>
-                    </div>
-                    <fieldset class="step_item_btns">
-                        <div class="radio">
-                            <label for=""></label>
-                            <input type="radio" name="" id="">
-                        </div>
-                    </fieldset>
-                </div>
-                <div class="steps_item_content_row">
-                    <div class="step_item_header">
-                        <h5>?</h5>
-                    </div>
-                    <div class="step_item_text">
-                        <p>!</p>
-                    </div>
-                    <fieldset class="step_item_btns">
-                        <div class="radio">
-                            <label for=""></label>
-                            <input type="radio" name="" id="">
-                        </div>
-                    </fieldset>
-                </div>
-                <div class="steps_item_content_row">
-                    <div class="step_item_header">
-                        <h5>?</h5>
-                    </div>
-                    <div class="step_item_text">
-                        <p>!</p>
-                    </div>
-                    <fieldset class="step_item_btns">
-                        <div class="radio">
-                            <label for=""></label>
-                            <input type="radio" name="" id="">
-                        </div>
-                    </fieldset>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+@section('step_header', 'Now we need information about your home')
+@section('step_description', 'This information will be used to prepare for a cleaning')
+
+@section('step_content')
+
+<x-base-block block-name="Home surpaces">
+    <x-block-item question="What types of flooring in your home?" description="Check all that apply">
+        <x-checkbox name="types_of_flooring" id="type_hardwood" value="hardwood">Hardwood</x-checkbox>
+        <x-checkbox name="types_of_flooring" id="type_cork" value="cork">Cork</x-checkbox>
+        <x-checkbox name="types_of_flooring" id="type_vinyl" value="vinyl">Vinyl</x-checkbox>
+        <x-checkbox name="types_of_flooring" id="type_concrete" value="concrete">Concrete</x-checkbox>
+        <x-checkbox name="types_of_flooring" id="type_carpet" value="carpet">Carpet</x-checkbox>
+        <x-checkbox name="types_of_flooring" id="type_stone" value="stone">Natural Stone</x-checkbox>
+        <x-checkbox name="types_of_flooring" id="type_tile" value="tile">Tile</x-checkbox>
+        <x-checkbox name="types_of_flooring" id="type_laminate" value="laminate">Laminate</x-checkbox>
+    </x-block-item>
+
+    <x-block-item question="What types of countertops in your home?" description="Check all that apply">
+        <x-checkbox name="types_of_countertops" id="type_concrete" value="concrete">Concrete</x-checkbox>
+        <x-checkbox name="types_of_countertops" id="type_quartz" value="quartz">Quartz</x-checkbox>
+        <x-checkbox name="types_of_countertops" id="type_formica" value="formica">Formica</x-checkbox>
+        <x-checkbox name="types_of_countertops" id="type_granite" value="granite">Granite</x-checkbox>
+        <x-checkbox name="types_of_countertops" id="type_marble" value="marble">Marble</x-checkbox>
+        <x-checkbox name="types_of_countertops" id="type_tile" value="tile">Tile</x-checkbox>
+        <x-checkbox name="types_of_countertops" id="type_stone" value="stone">Paper stone</x-checkbox>
+        <x-checkbox name="types_of_countertops" id="type_block" value="block">Butcherblock</x-checkbox>
+    </x-block-item>
+
+    <x-block-item question="Are there stainless steel appliances?">
+        <x-radio-round id="appliences_yes" name="steel_appliances" value="true">Yes</x-radio-round>
+        <x-radio-round id="appliences_no" name="steel_appliances" value="false">Yes</x-radio-round>
+    </x-block-item>
+
+    <x-block-item question="What type of stove you use?">
+        <x-radio-round id="stove_gas" name="stove_type" value="gas">Gas</x-radio-round>
+        <x-radio-round id="stove_electric" name="stove_type" value="electric">Electric</x-radio-round>
+    </x-block-item>
+
+    <x-block-item question="Are shower doors made of glass?">
+        <x-radio-round id="shower_yes" name="shower_glass" value="true">Yes</x-radio-round>
+        <x-radio-round id="shower_no" name="shower_glass" value="false">No</x-radio-round>
+    </x-block-item>
+
+    <x-block-item question="Any mold or mildew issues?">
+        <x-radio-round id="issues_yes" name="issues" value="true">Yes</x-radio-round>
+        <x-radio-round id="issues_no" name="issues" value="false">No</x-radio-round>
+    </x-block-item>
+
+</x-base-block>
+
+
 @endsection

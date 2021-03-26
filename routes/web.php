@@ -16,9 +16,19 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('estimate');
 });
-Route::get('/step', function () {
-    return view('step');
+
+Route::get('/step-one', function () {
+    return view('step_one');
 });
-Route::get('/test', function () {
-    return view('test-step');
+
+Route::get('/step-two', function () {
+    return view('step_two');
+});
+
+Route::get('/step-three', function () {
+    return view('step_three');
+});
+
+Route::get('/step-four', function () {
+    return view('step_four');
 });
