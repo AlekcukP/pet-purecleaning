@@ -50,5 +50,24 @@
 
 </x-base-block>
 
+<x-base-block block-name="Additional info">
 
+    <x-block-item question="Are there areas needing special attention? (optional)">
+        <x-textarea-label name="special_attention">
+                E.g. stainbuildup on shower glass"
+                doors, cobwebs in hard to reach
+                areas, disinfect door knobs, main
+                level baseboards need love...
+        </x-textarea-label>
+    </x-block-item>
+
+    <x-block-item question="Anything else we should know? (optional)">
+        <x-textarea-label name="else_info">
+            E.g. allergic to certain scents, can't
+            start earlier than 8AM, newborn
+            baby, excepting guests soon...
+        </x-textarea-label>
+    </x-block-item>
+
+</x-base-block>
 @endsection

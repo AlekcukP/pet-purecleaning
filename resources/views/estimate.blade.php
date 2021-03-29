@@ -32,14 +32,8 @@
                 </div>
             </div>
             <div class="estimate_input">
-                <div class="estimate_input_zip">
-                    <label for="input_zip">ZIP Code</label>
-                    <input type="number" name="zip" id="input_zip">
-                </div>
-                <div class="estimate_input_email">
-                    <label for="input_email">Email</label>
-                    <input type="email" name="email" id="input_email">
-                </div>
+                <x-input-label id="user_zip" type="number" name="user_zip">ZIP Code</x-input-label>
+                <x-input-label id="user_email" type="email" name="user_email">Email</x-input-label>
             </div>
             <div class="estimate_button">
                 <input type="button" value="Continue">

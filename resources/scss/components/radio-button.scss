@@ -1,0 +1,24 @@
+.radio_button{
+    width: 150px;
+}
+.radio_button_el{
+    display: block;
+    box-sizing: border-box;
+    width: inherit;
+    text-align: center;
+    padding: 12px 5px;
+    border: $border;
+    border-radius: 3px;
+}
+.radio_button_el:hover{
+    border-color: $blue;
+    color: $blue;
+}
+.radio_button_active:hover{
+    color: #fff;
+}
+.radio_button_active{
+    border-color: $blue;
+    background-color: $blue;
+    color: #fff;
+}

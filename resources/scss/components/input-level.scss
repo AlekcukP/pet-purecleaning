@@ -1,0 +1,21 @@
+.input_level{
+    width: 650px;
+}
+.input_level_el{
+    display: block;
+    width: 55px;
+    height: 20px;
+    border: $border
+}
+.input_level_sign{
+    display: flex;
+    justify-content: space-between;
+}
+.input_level_container{
+    display: flex;
+    justify-content: space-between;
+}
+.input_level_active{
+    border-color: $blue;
+    background-color: $blue;
+}

@@ -1,0 +1,242 @@
+@import url(https://fonts.googleapis.com/css2?family=Londrina+Outline&family=Nunito+Sans:wght@300;400;700&display=swap);
+input[type=checkbox], input[type=radio], input[type=file] {
+  visibility: hidden;
+  position: absolute;
+  z-index: -100;
+}
+
+html, body {
+  width: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+}
+
+main {
+  width: 60%;
+}
+
+ul, li, fieldset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+h1, h2, h3, h4, h5, h6, p, body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+label {
+  cursor: pointer;
+}
+
+.header {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+.header_logo {
+  display: flex;
+  align-items: center;
+}
+.header_pure {
+  font-family: "Londrina Outline", cursive;
+  font-size: 50px;
+}
+.header_house {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: #8ec73e;
+  margin: 12px 0 0 8px;
+}
+.header_serving {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #aca9a9;
+}
+.header_county {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #8ec73e;
+  font-size: 16px;
+}
+
+.step_inform {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding: 50px 100px;
+}
+.step_inform_header h4 {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 22px;
+}
+.step_inform_text p {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 16px;
+  color: #aca9a9;
+}
+
+.step_item {
+  width: 100%;
+}
+
+.steps_nav {
+  width: 100%;
+  height: 40px;
+  background-color: #f5f3f3;
+  border: 2px solid #ebebeb;
+}
+.steps_nav_list {
+  display: flex;
+  height: inherit;
+}
+.steps_nav_item {
+  display: block;
+  height: inherit;
+  width: 200px;
+  text-align: center;
+}
+
+.radio_button {
+  width: 150px;
+}
+
+.radio_button_el {
+  display: block;
+  box-sizing: border-box;
+  width: inherit;
+  text-align: center;
+  padding: 12px 5px;
+  border: 2px solid #ebebeb;
+  border-radius: 3px;
+}
+
+.radio_button_el:hover {
+  border-color: #03a9f4;
+  color: #03a9f4;
+}
+
+.radio_button_active:hover {
+  color: #fff;
+}
+
+.radio_button_active {
+  border-color: #03a9f4;
+  background-color: #03a9f4;
+  color: #fff;
+}
+
+.radio_round {
+  display: flex;
+  align-items: center;
+  max-width: 90px;
+}
+
+.radio_round_el {
+  display: block;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #ebebeb;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.radio_round_el:hover {
+  border-color: #03a9f4;
+}
+
+.radio_round_active {
+  border-color: #03a9f4;
+}
+
+.radio_round_active::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 8%;
+  left: 8%;
+  width: 25px;
+  height: 25px;
+  background-color: #03a9f4;
+  border-radius: 50%;
+}
+
+.input_level {
+  width: 650px;
+}
+
+.input_level_el {
+  display: block;
+  width: 55px;
+  height: 20px;
+  border: 2px solid #ebebeb;
+}
+
+.input_level_sign {
+  display: flex;
+  justify-content: space-between;
+}
+
+.input_level_container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.input_level_active {
+  border-color: #03a9f4;
+  background-color: #03a9f4;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  max-width: 150px;
+}
+
+.checkbox_el {
+  display: block;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #ebebeb;
+  border-radius: 3px;
+  margin-right: 10px;
+  position: relative;
+}
+
+.checkbox_el:hover {
+  border-color: #03a9f4;
+}
+
+.checkbox_active {
+  border-color: #03a9f4;
+  background-color: #03a9f4;
+}
+
+.checkbox_active::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background: url(/images/icon-check.png?be4d8d9c95093636f67ede30f3932728) no-repeat center center;
+  background-size: 25px;
+  width: 30px;
+  height: 30px;
+}
+

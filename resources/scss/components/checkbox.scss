@@ -1,0 +1,30 @@
+.checkbox{
+    display: flex;
+    align-items: center;
+    max-width: 150px;
+}
+.checkbox_el{
+    display: block;
+    width: 30px;
+    height: 30px;
+    border: $border;
+    border-radius: 3px;
+    margin-right: 10px;
+    position: relative;
+}
+.checkbox_el:hover{
+    border-color: $blue;
+}
+.checkbox_active{
+    border-color: $blue;
+    background-color: $blue;
+}
+.checkbox_active::before{
+    content: '';
+    display: block;
+    position: absolute;
+    background: url('../../png/icon-check.png') no-repeat center center;
+    background-size: 25px;
+    width: 30px;
+    height: 30px;
+}

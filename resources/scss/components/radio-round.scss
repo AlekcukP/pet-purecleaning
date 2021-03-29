@@ -1,0 +1,32 @@
+.radio_round{
+    display: flex;
+    align-items: center;
+    max-width: 90px;
+}
+.radio_round_el{
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border: $border;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.radio_round_el:hover{
+    border-color: $blue;
+}
+.radio_round_active{
+    border-color: $blue;
+}
+.radio_round_active::before{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 8%;
+    left: 8%;
+    width: 25px;
+    height: 25px;
+    background-color: $blue;
+    border-radius: 50%;
+}
+

@@ -1,4 +1,5 @@
-<div class="steps_item_content_row">
+<div class="step_item_row">
+
     @if($question)
     <div class="step_item_header">
         <h5>{{ $question }}</h5>
@@ -14,4 +15,5 @@
     <fieldset class="step_item_forms">
         {{ $slot }}
     </fieldset>
+
 </div>
