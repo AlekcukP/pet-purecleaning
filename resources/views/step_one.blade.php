@@ -2,6 +2,8 @@
 
 @section('step_header', 'Lets start with some basic information')
 @section('step_description', 'At the end of the quote you will get a price for cleaning')
+@section('form_id', 'form_step_one')
+@section('steps_left', '3 steps left')
 
 @section('step_content')
 
@@ -35,7 +37,7 @@
 </x-base-block>
 
 <x-base-block block-name="Personal info">
-    <x-block-item>
+    <x-block-item fieldset-class="personal_forms">
         <div class="step_item_forms_row">
                 <x-input-label id="user_name" name="user_name" type="text">First name</x-input-label>
                 <x-input-label id="user_surname" name="user_surname" type="text">Last name</x-input-label>
@@ -50,19 +52,19 @@
         </div>
         <div class="step_item_forms_row">
             <x-input-label id="user_tel" name="user_tel" type="tel">Mobile phone</x-input-label>
-
-            <label for="referral_type">How did you hear about us?</label>
-            <select name="referral_type" id="referral_type">
-                    <option value="">Choose a Referral</option>
-                    <option value="Returning Client">Returning Client</option>
-                    <option value="Current Client">Current Client New Home</option>
-                    <option value="Referral Client">Personal Recommendation</option>
-                    <option value="Employee">UW Employee</option>
-                    <option value="Realtor">Realtor</option>
-                    <option value="Google">Google</option>
-                    <option value="Facebook">Facebook</option>
-                    <option value="Other">Other</option>
-                </select>
+            <div class="select_label">
+                <label for="referral_type">How did you hear about us?</label>
+                <select name="referral_type" id="referral_type">
+                        <option value="">Choose a Referral</option>
+                        <option value="Returning Client">Returning Client</option>
+                        <option value="Current Client">Current Client New Home</option>
+                        <option value="Referral Client">Personal Recommendation</option>
+                        <option value="Employee">UW Employee</option>
+                        <option value="Realtor">Realtor</option>
+                        <option value="Google">Google</option>
+                        <option value="Facebook">Facebook</option>
+                        <option value="Other">Other</option>
+                    </select>
             </div>
         </div>
     </x-block-item>

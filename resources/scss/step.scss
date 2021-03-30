@@ -1,4 +1,5 @@
 .step{
+    width: 100%;
 
     &_inform{
         display: flex;
@@ -7,12 +8,13 @@
         padding: 50px 100px;
     }
     &_inform_header h4{
-        font-family: $font;
         font-size: 22px;
     }
     &_inform_text p{
-        font-family: $font;
         font-size: 16px;
         color: $text-grey;
+    }
+    &_content{
+        width: 100%;
     }
 }

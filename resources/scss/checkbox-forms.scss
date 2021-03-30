@@ -1,0 +1,9 @@
+.checkbox_forms{
+    width: 100%;
+    flex-flow: column;
+}
+.checkbox_forms .step_item_forms_row{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}

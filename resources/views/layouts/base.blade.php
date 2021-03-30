@@ -29,7 +29,7 @@
             <li><a href="">Terms of Service</a></li>
             <li><a href=""></a>Cancellation Policy</li>
         </ul>
-        <p>2021 Pure House Cleaning. All rights reserved</p>
+        <p>&#169; 2021 Pure House Cleaning. All rights reserved</p>
     </footer>
 </body>
 </html>

@@ -1,0 +1,25 @@
+.step_item{
+    &_row{
+        margin-bottom: 25px;
+        width: 100%;
+    }
+
+    &_forms{
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 10px;
+        column-gap: 10px;
+        width: 100%;
+    }
+
+    &_header h5{
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+
+    &_text p{
+        font-size: 14px;
+        color: $text-grey;
+        margin-bottom: 12px;
+    }
+}

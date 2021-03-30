@@ -1,7 +1,7 @@
 .checkbox{
     display: flex;
     align-items: center;
-    max-width: 150px;
+    min-width: 150px;
 }
 .checkbox_el{
     display: block;
@@ -27,4 +27,10 @@
     background-size: 25px;
     width: 30px;
     height: 30px;
+}
+.checkbox_sign{
+    color: $text-grey;
+}
+.checkbox_active ~ .checkbox_sign{
+    color: $blue;
 }

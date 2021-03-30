@@ -1854,6 +1854,7 @@ new _class_switcher_js__WEBPACK_IMPORTED_MODULE_0__.default('radio_button_active
 new _class_switcher_js__WEBPACK_IMPORTED_MODULE_0__.default('radio_round_active', 'radio_round_el', 'step_item_forms', 'step_content');
 new _input_lavel_js__WEBPACK_IMPORTED_MODULE_1__.default('step_content');
 new _toggle_class_js__WEBPACK_IMPORTED_MODULE_2__.default('checkbox_active', 'checkbox_el', 'step_content');
+new _toggle_class_js__WEBPACK_IMPORTED_MODULE_2__.default('input_icon_active', 'input_icon_el', 'step_content');
 
 /***/ }),
 

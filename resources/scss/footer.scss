@@ -1,0 +1,19 @@
+.footer{
+    width: $flex-width;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    border-top: 1px solid $green;
+    background-color: $bg-green;
+
+    &_links{
+        width: 50%;
+        display: flex;
+        flex-flow: row;
+        justify-content: space-evenly;
+
+        & li{
+            display: block;
+        }
+    }
+}

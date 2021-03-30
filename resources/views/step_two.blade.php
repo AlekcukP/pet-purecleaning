@@ -2,6 +2,8 @@
 
 @section('step_header', 'Now we need information about your home')
 @section('step_description', 'This information will be used to prepare for a cleaning')
+@section('form_id', 'form_step_two')
+@section('steps_left', '2 steps left')
 
 @section('step_content')
 <x-base-block block-name="Home residents">

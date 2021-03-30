@@ -1,0 +1,15 @@
+.icon_fridge .input_icon_el::before{
+    background-image: url('../svg/fridge.svg');
+}
+.icon_oven .input_icon_el::before{
+    background-image: url('../svg/oven.svg');
+}
+.icon_garage .input_icon_el::before{
+    background-image: url('../svg/garage.svg');
+}
+.icon_laundary .input_icon_el::before{
+    background-image: url('../svg/laundary.svg');
+}
+.icon_blinds .input_icon_el::before{
+    background-image: url('../svg/window.svg');
+}

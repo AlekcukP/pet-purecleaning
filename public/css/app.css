@@ -40,12 +40,94 @@ label {
   cursor: pointer;
 }
 
+.step_button {
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+.step_button button {
+  color: #fff;
+  background-color: #8ec73e;
+  border: none;
+  border-radius: 3px;
+  width: 140px;
+  height: 38px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.estimate {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  padding: 50px 0;
+}
+.estimate_header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.estimate_header h1 {
+  font-size: 33px;
+}
+.estimate_forms {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+}
+.estimate_select {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+.estimate_select_item {
+  width: 35%;
+  padding: 10px;
+}
+.estimate_select select {
+  height: 34px;
+  width: 100%;
+}
+.estimate_input {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 10px 0;
+}
+.estimate_input .input_label {
+  padding: 10px;
+}
+.estimate_input .input_label:nth-child(1) {
+  width: 20%;
+}
+.estimate_input .input_label:nth-child(2) {
+  width: 50%;
+}
+.estimate_button {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+.estimate_button input {
+  color: #fff;
+  background-color: #8ec73e;
+  border: none;
+  border-radius: 3px;
+  width: 140px;
+  height: 38px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
 .header {
   width: 60%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 0;
+  border-bottom: 2px solid #ebebeb;
 }
 .header_logo {
   display: flex;
@@ -56,27 +138,45 @@ label {
   font-size: 50px;
 }
 .header_house {
-  font-family: "Nunito Sans", sans-serif;
   font-size: 20px;
   font-weight: bold;
   color: #8ec73e;
   margin: 12px 0 0 8px;
 }
 .header_serving {
-  font-family: "Nunito Sans", sans-serif;
   font-weight: 300;
   text-transform: uppercase;
   font-size: 12px;
-  color: #aca9a9;
+  color: #929191;
 }
 .header_county {
-  font-family: "Nunito Sans", sans-serif;
   font-weight: 600;
   text-transform: uppercase;
   color: #8ec73e;
   font-size: 16px;
 }
 
+.footer {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+  border-top: 1px solid #8ec73e;
+  background-color: #f2fae8;
+}
+.footer_links {
+  width: 50%;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-evenly;
+}
+.footer_links li {
+  display: block;
+}
+
+.step {
+  width: 100%;
+}
 .step_inform {
   display: flex;
   flex-flow: column;
@@ -84,17 +184,95 @@ label {
   padding: 50px 100px;
 }
 .step_inform_header h4 {
-  font-family: "Nunito Sans", sans-serif;
   font-size: 22px;
 }
 .step_inform_text p {
-  font-family: "Nunito Sans", sans-serif;
   font-size: 16px;
-  color: #aca9a9;
+  color: #929191;
+}
+.step_content {
+  width: 100%;
+}
+
+.textarea_label {
+  display: flex;
+  align-items: center;
+}
+.textarea_label_el {
+  display: block;
+  border: 2px solid #ebebeb;
+  border-radius: 3px;
+  width: 300px;
+  height: 120px;
+  margin-right: 30px;
+}
+.textarea_label_sign {
+  width: 150px;
+}
+.textarea_label_text {
+  color: #929191;
+}
+
+.input_label {
+  display: flex;
+  flex-flow: column;
+}
+.input_label label {
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+.input_label input {
+  height: 28px;
+  border: 2px solid #ebebeb;
+}
+.input_label input:active {
+  border-color: #03a9f4;
+  border-radius: 3px;
+}
+
+.step_item_row {
+  margin-bottom: 25px;
+  width: 100%;
+}
+.step_item_forms {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 10px;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  width: 100%;
+}
+.step_item_header h5 {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+.step_item_text p {
+  font-size: 14px;
+  color: #929191;
+  margin-bottom: 12px;
 }
 
 .step_item {
   width: 100%;
+  padding: 30px 0;
+  border-top: 2px solid #ebebeb;
+}
+.step_item_container {
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+}
+.step_item_type {
+  width: 30%;
+}
+.step_item_type h3 {
+  text-transform: uppercase;
+  font-size: 16px;
+}
+.step_item_content {
+  width: 70%;
 }
 
 .steps_nav {
@@ -126,6 +304,7 @@ label {
   padding: 12px 5px;
   border: 2px solid #ebebeb;
   border-radius: 3px;
+  color: #929191;
 }
 
 .radio_button_el:hover {
@@ -146,7 +325,7 @@ label {
 .radio_round {
   display: flex;
   align-items: center;
-  max-width: 90px;
+  min-width: 100px;
 }
 
 .radio_round_el {
@@ -179,6 +358,14 @@ label {
   border-radius: 50%;
 }
 
+.radio_round_sign {
+  color: #929191;
+}
+
+.radio_round_active ~ .radio_round_sign {
+  color: #03a9f4;
+}
+
 .input_level {
   width: 650px;
 }
@@ -194,6 +381,10 @@ label {
   display: flex;
   justify-content: space-between;
 }
+.input_level_sign p {
+  font-size: 12px;
+  color: #929191;
+}
 
 .input_level_container {
   display: flex;
@@ -208,7 +399,7 @@ label {
 .checkbox {
   display: flex;
   align-items: center;
-  max-width: 150px;
+  min-width: 150px;
 }
 
 .checkbox_el {
@@ -238,5 +429,160 @@ label {
   background-size: 25px;
   width: 30px;
   height: 30px;
+}
+
+.checkbox_sign {
+  color: #929191;
+}
+
+.checkbox_active ~ .checkbox_sign {
+  color: #03a9f4;
+}
+
+.input_icon {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+.input_icon_el {
+  display: block;
+  border: 2px solid #ebebeb;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  margin-bottom: 10px;
+  position: relative;
+}
+.input_icon_sign {
+  display: block;
+  max-width: 85px;
+  text-align: center;
+}
+
+.input_icon_el::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  background-size: 45px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  filter: invert(70%);
+}
+
+.input_icon_active {
+  border-color: #03a9f4;
+  background-color: #03a9f4;
+}
+
+.input_icon_active::before {
+  filter: invert(100%);
+}
+
+label[for=photos_input] {
+  display: block;
+  width: 150px;
+  height: 50px;
+  border: 3px solid #7a7a7a;
+  color: #929191;
+  text-align: center;
+  background-color: #ebebeb;
+  position: relative;
+}
+
+label[for=photos_input]::after {
+  content: "JPG, PNG only; maximum file size - 5MB";
+  font-weight: 300;
+  font-size: 14px;
+  display: block;
+  position: absolute;
+  top: 35%;
+  left: 110%;
+  width: 250px;
+}
+
+label[for=photos_input]::before {
+  content: "Select a file";
+  font-weight: 700;
+  font-size: 16px;
+  color: #7a7a7a;
+  display: block;
+  position: absolute;
+  top: 15px;
+  left: 40px;
+}
+
+.personal_forms .step_item_forms_row {
+  display: flex;
+  width: 100%;
+}
+
+.personal_forms .step_item_forms_row:nth-child(4) .select_label {
+  padding: 5px;
+  width: 50%;
+}
+
+.personal_forms .step_item_forms_row:nth-child(4) .select_label label {
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.personal_forms .step_item_forms_row:nth-child(4) .select_label select {
+  display: block;
+  width: 100%;
+  height: 34px;
+}
+
+.personal_forms .step_item_forms_row .input_label {
+  padding: 5px;
+}
+
+.personal_forms .step_item_forms_row:nth-child(1) .input_label {
+  width: 50%;
+}
+
+.personal_forms .step_item_forms_row:nth-child(3) .input_label {
+  width: 50%;
+}
+
+.personal_forms .step_item_forms_row:nth-child(4) .input_label, .personal_forms .step_item_forms_row:nth-child(4) .select_label {
+  width: 50%;
+}
+
+.personal_forms .step_item_forms_row:nth-child(2) .input_label:nth-child(1) {
+  width: 70%;
+}
+
+.checkbox_forms {
+  width: 100%;
+  flex-flow: column;
+}
+
+.checkbox_forms .step_item_forms_row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.icon_fridge .input_icon_el::before {
+  background-image: url(/images/fridge.svg?77d2366f36624316cf56910c62e23fc5);
+}
+
+.icon_oven .input_icon_el::before {
+  background-image: url(/images/oven.svg?49b12188e30f543247a0b181357e4f4b);
+}
+
+.icon_garage .input_icon_el::before {
+  background-image: url(/images/garage.svg?775f08b6e36eac22d079b89aae494119);
+}
+
+.icon_laundary .input_icon_el::before {
+  background-image: url(/images/laundary.svg?7c66d34d75cf5368693707e2311886a1);
+}
+
+.icon_blinds .input_icon_el::before {
+  background-image: url(/images/window.svg?25698e2d74b89f92572fed662b0ae6fe);
 }
 

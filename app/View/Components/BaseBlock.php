@@ -12,7 +12,7 @@ class BaseBlock extends Component
      *
      * @return void
      */
-    public function __construct($blockName)
+    public function __construct($blockName = NULL)
     {
         $this->blockName = $blockName;
     }

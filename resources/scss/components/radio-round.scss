@@ -1,7 +1,7 @@
 .radio_round{
     display: flex;
     align-items: center;
-    max-width: 90px;
+    min-width: 100px;
 }
 .radio_round_el{
     display: block;
@@ -29,4 +29,9 @@
     background-color: $blue;
     border-radius: 50%;
 }
-
+.radio_round_sign{
+    color: $text-grey;
+}
+.radio_round_active ~ .radio_round_sign{
+    color: $blue;
+}

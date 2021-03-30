@@ -12,7 +12,7 @@
     </div>
     @endif
 
-    <fieldset class="step_item_forms">
+    <fieldset class="step_item_forms {{ $fieldsetClass }}">
         {{ $slot }}
     </fieldset>
 

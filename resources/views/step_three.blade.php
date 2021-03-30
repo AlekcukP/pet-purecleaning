@@ -2,30 +2,40 @@
 
 @section('step_header', 'Now we need information about your home')
 @section('step_description', 'This information will be used to prepare for a cleaning')
+@section('form_id', 'form_step_three')
+@section('steps_left', '1 steps left')
 
 @section('step_content')
 
 <x-base-block block-name="Home surpaces">
-    <x-block-item question="What types of flooring in your home?" description="Check all that apply">
-        <x-checkbox name="types_of_flooring" id="type_hardwood" value="hardwood">Hardwood</x-checkbox>
-        <x-checkbox name="types_of_flooring" id="type_cork" value="cork">Cork</x-checkbox>
-        <x-checkbox name="types_of_flooring" id="type_vinyl" value="vinyl">Vinyl</x-checkbox>
-        <x-checkbox name="types_of_flooring" id="type_concrete" value="concrete">Concrete</x-checkbox>
-        <x-checkbox name="types_of_flooring" id="type_carpet" value="carpet">Carpet</x-checkbox>
-        <x-checkbox name="types_of_flooring" id="type_stone" value="stone">Natural Stone</x-checkbox>
-        <x-checkbox name="types_of_flooring" id="type_tile" value="tile">Tile</x-checkbox>
-        <x-checkbox name="types_of_flooring" id="type_laminate" value="laminate">Laminate</x-checkbox>
+    <x-block-item question="What types of flooring in your home?" description="Check all that apply" fieldset-class="checkbox_forms">
+        <div class="step_item_forms_row">
+            <x-checkbox name="types_of_flooring" id="type_hardwood" value="hardwood">Hardwood</x-checkbox>
+            <x-checkbox name="types_of_flooring" id="type_cork" value="cork">Cork</x-checkbox>
+            <x-checkbox name="types_of_flooring" id="type_vinyl" value="vinyl">Vinyl</x-checkbox>
+            <x-checkbox name="types_of_flooring" id="type_concrete" value="concrete">Concrete</x-checkbox>
+        </div>
+        <div class="step_item_forms_row">
+            <x-checkbox name="types_of_flooring" id="type_carpet" value="carpet">Carpet</x-checkbox>
+            <x-checkbox name="types_of_flooring" id="type_stone" value="stone">Natural Stone</x-checkbox>
+            <x-checkbox name="types_of_flooring" id="type_tile" value="tile">Tile</x-checkbox>
+            <x-checkbox name="types_of_flooring" id="type_laminate" value="laminate">Laminate</x-checkbox>
+        </div>
     </x-block-item>
 
-    <x-block-item question="What types of countertops in your home?" description="Check all that apply">
-        <x-checkbox name="types_of_countertops" id="type_concrete" value="concrete">Concrete</x-checkbox>
-        <x-checkbox name="types_of_countertops" id="type_quartz" value="quartz">Quartz</x-checkbox>
-        <x-checkbox name="types_of_countertops" id="type_formica" value="formica">Formica</x-checkbox>
-        <x-checkbox name="types_of_countertops" id="type_granite" value="granite">Granite</x-checkbox>
-        <x-checkbox name="types_of_countertops" id="type_marble" value="marble">Marble</x-checkbox>
-        <x-checkbox name="types_of_countertops" id="type_tile" value="tile">Tile</x-checkbox>
-        <x-checkbox name="types_of_countertops" id="type_stone" value="stone">Paper stone</x-checkbox>
-        <x-checkbox name="types_of_countertops" id="type_block" value="block">Butcherblock</x-checkbox>
+    <x-block-item question="What types of countertops in your home?" description="Check all that apply" fieldset-class="checkbox_forms">
+        <div class="step_item_forms_row">
+            <x-checkbox name="types_of_countertops" id="type_concrete" value="concrete">Concrete</x-checkbox>
+            <x-checkbox name="types_of_countertops" id="type_quartz" value="quartz">Quartz</x-checkbox>
+            <x-checkbox name="types_of_countertops" id="type_formica" value="formica">Formica</x-checkbox>
+            <x-checkbox name="types_of_countertops" id="type_granite" value="granite">Granite</x-checkbox>
+        </div>
+        <div class="step_item_forms_row">
+            <x-checkbox name="types_of_countertops" id="type_marble" value="marble">Marble</x-checkbox>
+            <x-checkbox name="types_of_countertops" id="type_tile" value="tile">Tile</x-checkbox>
+            <x-checkbox name="types_of_countertops" id="type_stone" value="stone">Paper stone</x-checkbox>
+            <x-checkbox name="types_of_countertops" id="type_block" value="block">Butcherblock</x-checkbox>
+        </div>
     </x-block-item>
 
     <x-block-item question="Are there stainless steel appliances?">

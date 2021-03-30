@@ -1,0 +1,20 @@
+.input_label{
+    display: flex;
+    flex-flow: column;
+
+    & label{
+        font-size: 12px;
+        font-weight: 700;
+        margin-bottom: 5px;
+    }
+
+    & input{
+        height: 28px;
+        border: $border;
+    }
+
+    & input:active{
+        border-color: $blue;
+        border-radius: 3px;
+    }
+}

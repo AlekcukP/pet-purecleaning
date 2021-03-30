@@ -9,3 +9,4 @@ new ClassSwither('radio_round_active', 'radio_round_el', 'step_item_forms', 'ste
 
 new InputLavel('step_content');
 new ToggleClass('checkbox_active', 'checkbox_el', 'step_content');
+new ToggleClass('input_icon_active', 'input_icon_el', 'step_content');

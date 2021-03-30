@@ -1,0 +1,39 @@
+.input_icon{
+
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+
+    &_el{
+        display: block;
+        border: $border;
+        border-radius: 50%;
+        width: 70px;
+        height: 70px;
+        margin-bottom: 10px;
+        position: relative;
+    }
+    &_sign{
+        display: block;
+        max-width: 85px;
+        text-align: center;
+    }
+}
+.input_icon_el::before{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background-size: 45px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    filter: invert(70%);
+}
+.input_icon_active{
+    border-color: $blue;
+    background-color: $blue;
+}
+.input_icon_active::before{
+    filter: invert(100%);
+}

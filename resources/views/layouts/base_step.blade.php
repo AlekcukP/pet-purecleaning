@@ -17,9 +17,12 @@
                     </p>
                 </div>
         </article>
-        <section class="step_content">
+        <form class="step_content" action=""  method="post" id="@yield('form_id')">
         @section('step_content')
         @show
-        </section>
+        </form>
+        <div class="step_button">
+            <button type="submit" form="@yield('form_id')">@yield('steps_left')</button>
+        </div>
     </section>
 @endsection

@@ -8,15 +8,17 @@ class BlockItem extends Component
 {
     public $question;
     public $description;
+    public $fieldsetClass;
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct($question = NULL, $description = NULL)
+    public function __construct($question = NULL, $description = NULL, $fieldsetClass = NULL)
     {
         $this->question = $question;
         $this->description = $description;
+        $this->fieldsetClass = $fieldsetClass;
     }
 
     /**
