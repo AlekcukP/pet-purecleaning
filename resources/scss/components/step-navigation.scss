@@ -1,18 +1,106 @@
+$nav-height: 40px;
+$nav-width: 200px;
+$nav-font: 14px;
+$nav-border: rgb(199, 199, 199);
+
 .steps_nav{
     width: 100%;
-    height: 40px;
+    height: $nav-height;
     background-color: #f5f3f3;
     border: $border;
+    display: flex;
+    justify-content: center;
 
     &_list{
         display: flex;
         height: inherit;
     }
+}
+.steps_nav_current{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: $nav-width;
+    height: $nav-height;
+    color: #fff;
+    background-color: $green;
+    border-right: 1px solid $nav-border;
 
-    &_item{
-        display: block;
-        height: inherit;
-        width: 200px;
-        text-align: center;
+    & span{
+        display: flex;
+        align-items: center;
+        text-transform: uppercase;
+        font-size: $nav-font;
     }
+
+    & span::before{
+        content: '';
+        display: block;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        border: 2px solid #fff;
+        margin-right: 5px;
+    }
+}
+
+.steps_nav_blocked{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: $nav-width;
+    height: $nav-height;
+    color: $text-grey;
+    border-right: 1px solid $nav-border;
+
+    & span{
+        display: flex;
+        text-transform: uppercase;
+        font-size: $nav-font;
+        align-items: center;
+    }
+
+    & span::before{
+        content: '';
+        display: block;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        border: 2px solid $text-grey;
+        margin-right: 5px;
+    }
+}
+.steps_nav_done a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: $nav-width;
+    height: $nav-height;
+    background-color: #fff;
+    border-right: 1px solid $nav-border;
+
+    & span{
+        display: flex;
+        text-transform: uppercase;
+        font-size: $nav-font;
+        align-items: center;
+    }
+
+    & span::before{
+        content: '';
+        display: block;
+        margin-right: 5px;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        border: 2px solid #fff;
+        background-image: url('../../png/icon-check.png');
+        background-size: 10px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        filter: sepia() saturate(10000%) hue-rotate(30deg);
+    }
+}
+.steps_nav_item:first-child{
+    border-left: 1px solid $nav-border;
 }

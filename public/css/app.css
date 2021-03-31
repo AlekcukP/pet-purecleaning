@@ -127,7 +127,6 @@ label {
   justify-content: space-between;
   align-items: center;
   padding: 10px 0;
-  border-bottom: 2px solid #ebebeb;
 }
 .header_logo {
   display: flex;
@@ -205,6 +204,7 @@ label {
   width: 300px;
   height: 120px;
   margin-right: 30px;
+  resize: none;
 }
 .textarea_label_sign {
   width: 150px;
@@ -280,16 +280,97 @@ label {
   height: 40px;
   background-color: #f5f3f3;
   border: 2px solid #ebebeb;
+  display: flex;
+  justify-content: center;
 }
 .steps_nav_list {
   display: flex;
   height: inherit;
 }
-.steps_nav_item {
-  display: block;
-  height: inherit;
+
+.steps_nav_current {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 200px;
-  text-align: center;
+  height: 40px;
+  color: #fff;
+  background-color: #8ec73e;
+  border-right: 1px solid #c7c7c7;
+}
+.steps_nav_current span {
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+.steps_nav_current span::before {
+  content: "";
+  display: block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  margin-right: 5px;
+}
+
+.steps_nav_blocked {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 40px;
+  color: #929191;
+  border-right: 1px solid #c7c7c7;
+}
+.steps_nav_blocked span {
+  display: flex;
+  text-transform: uppercase;
+  font-size: 14px;
+  align-items: center;
+}
+.steps_nav_blocked span::before {
+  content: "";
+  display: block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 2px solid #929191;
+  margin-right: 5px;
+}
+
+.steps_nav_done a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 40px;
+  background-color: #fff;
+  border-right: 1px solid #c7c7c7;
+}
+.steps_nav_done a span {
+  display: flex;
+  text-transform: uppercase;
+  font-size: 14px;
+  align-items: center;
+}
+.steps_nav_done a span::before {
+  content: "";
+  display: block;
+  margin-right: 5px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  background-image: url(/images/icon-check.png?be4d8d9c95093636f67ede30f3932728);
+  background-size: 10px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  filter: sepia() saturate(10000%) hue-rotate(30deg);
+}
+
+.steps_nav_item:first-child {
+  border-left: 1px solid #c7c7c7;
 }
 
 .radio_button {
@@ -533,6 +614,11 @@ label[for=photos_input]::before {
   display: block;
   width: 100%;
   height: 34px;
+  background-clip: padding-box;
+  resize: none;
+  background-color: #fff;
+  border: 2px solid #ebebeb;
+  border-radius: 3px;
 }
 
 .personal_forms .step_item_forms_row .input_label {

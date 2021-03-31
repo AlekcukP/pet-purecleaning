@@ -1,7 +1,7 @@
 @extends('layouts.base')
 
 @section('content')
-    <x-step-navigation></x-step-navigation>
+    <x-step-navigation steps-value></x-step-navigation>
     <section class="step">
         <article class="step_inform">
                 <div class="step_inform_header">

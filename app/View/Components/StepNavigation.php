@@ -6,14 +6,22 @@ use Illuminate\View\Component;
 
 class StepNavigation extends Component
 {
+    public $stepsStatus;
+    public $stepsValue;
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($stepsStatus = array(
+        'one'=>'done',
+        'two'=>'done',
+        'three'=>'done',
+        'four'=>'done'
+        )
+    )
     {
-        //
+        $this->stepsStatus = $stepsStatus;
     }
 
     /**

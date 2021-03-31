@@ -44,8 +44,8 @@
 
 <x-base-block block-name="Cleaning before">
     <x-block-item question="Did you had a professioanl cleaning in past 2 monthes?">
-        <x-radio-round id="clean_before_yes" name="clean_before" value="true">Yes</x-radio-round>
-        <x-radio-round id="clean_before_no" name="clean_before" value="false">No</x-radio-round>
+        <x-radio-round id="clean_before_yes" name="clean_before" value="1">Yes</x-radio-round>
+        <x-radio-round id="clean_before_no" name="clean_before" value="0">No</x-radio-round>
     </x-block-item>
     <x-block-item question="What would you like us to do differently?">
         <x-textarea-label name="differently_info">

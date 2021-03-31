@@ -15,6 +15,11 @@
     display: block;
     width: 100%;
     height: 34px;
+    background-clip: padding-box;
+    resize: none;
+    background-color: #fff;
+    border: $border;
+    border-radius: 3px;
 }
 .personal_forms .step_item_forms_row .input_label{
     padding: 5px;

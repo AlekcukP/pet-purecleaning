@@ -39,8 +39,8 @@
     </x-block-item>
 
     <x-block-item question="Are there stainless steel appliances?">
-        <x-radio-round id="appliences_yes" name="steel_appliances" value="true">Yes</x-radio-round>
-        <x-radio-round id="appliences_no" name="steel_appliances" value="false">Yes</x-radio-round>
+        <x-radio-round id="appliences_yes" name="steel_appliances" value="1">Yes</x-radio-round>
+        <x-radio-round id="appliences_no" name="steel_appliances" value="0">No</x-radio-round>
     </x-block-item>
 
     <x-block-item question="What type of stove you use?">
@@ -49,13 +49,13 @@
     </x-block-item>
 
     <x-block-item question="Are shower doors made of glass?">
-        <x-radio-round id="shower_yes" name="shower_glass" value="true">Yes</x-radio-round>
-        <x-radio-round id="shower_no" name="shower_glass" value="false">No</x-radio-round>
+        <x-radio-round id="shower_yes" name="shower_glass" value="1">Yes</x-radio-round>
+        <x-radio-round id="shower_no" name="shower_glass" value="0">No</x-radio-round>
     </x-block-item>
 
     <x-block-item question="Any mold or mildew issues?">
-        <x-radio-round id="issues_yes" name="issues" value="true">Yes</x-radio-round>
-        <x-radio-round id="issues_no" name="issues" value="false">No</x-radio-round>
+        <x-radio-round id="issues_yes" name="issues" value="1">Yes</x-radio-round>
+        <x-radio-round id="issues_no" name="issues" value="0">No</x-radio-round>
     </x-block-item>
 
 </x-base-block>

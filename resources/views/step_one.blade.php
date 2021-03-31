@@ -44,7 +44,7 @@
         </div>
         <div class="step_item_forms_row">
             <x-input-label id="user_adress" name="user_address" type="text">Street address</x-input-label>
-            <x-input-label id="user_apt" name="personal_apt" type="number">Apt# (optional)</x-input-label>
+            <x-input-label id="user_apt" name="user_apt" type="number">Apt# (optional)</x-input-label>
         </div>
         <div class="step_item_forms_row">
             <x-input-label id="user_city" name="personal_city" type="text">City</x-input-label>
