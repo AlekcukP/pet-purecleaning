@@ -16,16 +16,16 @@
     </x-block-item>
 
     <x-block-item question="How many pets total?">
-        <x-radio-button id="pets_one" name="pets_amount" value="1">1</x-radio-button>
-        <x-radio-button id="pets_two" name="pets_amount" value="2">2</x-radio-button>
-        <x-radio-button id="pets_three" name="pets_amount" value="3">3+</x-radio-button>
+        <x-radio-button id="pets_one" name="pets_total" value="1">1</x-radio-button>
+        <x-radio-button id="pets_two" name="pets_total" value="2">2</x-radio-button>
+        <x-radio-button id="pets_three" name="pets_total" value="3">3+</x-radio-button>
     </x-block-item>
 
     <x-block-item question="How many adults reside at your location?">
-        <x-radio-button id="adults_none" name="adults_amount" value="0">None</x-radio-button>
-        <x-radio-button id="adults_few" name="adults_amount" value="1">1-2</x-radio-button>
-        <x-radio-button id="adults_group" name="adults_amount" value="3">3-4</x-radio-button>
-        <x-radio-button id="adults_more" name="adults_amount" value="5">5 and more</x-radio-button>
+        <x-radio-button id="adults_none" name="adults" value="0">None</x-radio-button>
+        <x-radio-button id="adults_few" name="adults" value="1">1-2</x-radio-button>
+        <x-radio-button id="adults_group" name="adults" value="3">3-4</x-radio-button>
+        <x-radio-button id="adults_more" name="adults" value="5">5 and more</x-radio-button>
     </x-block-item>
 
     <x-block-item question="How many children?">
@@ -44,11 +44,11 @@
 
 <x-base-block block-name="Cleaning before">
     <x-block-item question="Did you had a professioanl cleaning in past 2 monthes?">
-        <x-radio-round id="clean_before_yes" name="clean_before" value="1">Yes</x-radio-round>
-        <x-radio-round id="clean_before_no" name="clean_before" value="0">No</x-radio-round>
+        <x-radio-round id="clean_before_yes" name="previous_clean" value="1">Yes</x-radio-round>
+        <x-radio-round id="clean_before_no" name="previous_clean" value="0">No</x-radio-round>
     </x-block-item>
     <x-block-item question="What would you like us to do differently?">
-        <x-textarea-label name="differently_info">
+        <x-textarea-label name="previous_different">
             For example be quiet when kids are sleeping,
             be most gentle with certain , better communication
             with my cleaner, etc.

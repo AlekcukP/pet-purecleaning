@@ -39,22 +39,22 @@
 <x-base-block block-name="Personal info">
     <x-block-item fieldset-class="personal_forms">
         <div class="step_item_forms_row">
-                <x-input-label id="user_name" name="user_name" type="text">First name</x-input-label>
-                <x-input-label id="user_surname" name="user_surname" type="text">Last name</x-input-label>
+                <x-input-label id="user_name" name="name" type="text">First name</x-input-label>
+                <x-input-label id="user_surname" name="surname" type="text">Last name</x-input-label>
         </div>
         <div class="step_item_forms_row">
-            <x-input-label id="user_adress" name="user_address" type="text">Street address</x-input-label>
-            <x-input-label id="user_apt" name="user_apt" type="number">Apt# (optional)</x-input-label>
+            <x-input-label id="user_adress" name="address" type="text">Street address</x-input-label>
+            <x-input-label id="user_apt" name="apt" type="number">Apt# (optional)</x-input-label>
         </div>
         <div class="step_item_forms_row">
-            <x-input-label id="user_city" name="personal_city" type="text">City</x-input-label>
-            <x-input-label id="user_footage" name="user_footage" type="number">Home Square Footage</x-input-label>
+            <x-input-label id="user_city" name="city" type="text">City</x-input-label>
+            <x-input-label id="user_footage" name="footage" type="number">Home Square Footage</x-input-label>
         </div>
         <div class="step_item_forms_row">
-            <x-input-label id="user_tel" name="user_tel" type="tel">Mobile phone</x-input-label>
+            <x-input-label id="user_tel" name="phone" type="tel">Mobile phone</x-input-label>
             <div class="select_label">
                 <label for="referral_type">How did you hear about us?</label>
-                <select name="referral_type" id="referral_type">
+                <select name="referral" id="referral_type">
                         <option value="">Choose a Referral</option>
                         <option value="Returning Client">Returning Client</option>
                         <option value="Current Client">Current Client New Home</option>

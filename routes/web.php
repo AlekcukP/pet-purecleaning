@@ -13,9 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('estimate');
-});
+use App\Http\Controllers\Step;
+
+
+Route::get('/', [Step::class, 'show']);
+Route::post('/step/basic', [Step::class, 'basic']);
 
 Route::get('/step-one', function () {
     return view('step_one');

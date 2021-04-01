@@ -6,7 +6,8 @@
         <div class="estimate_header">
             <h1>Get an estimate for home cleaning</h1>
         </div>
-        <form class="estimate_forms" action="">
+        <form class="estimate_forms" action="/step/basic" method="POST">
+            {{ csrf_field() }}
             <div class="estimate_select">
                 <div class="estimate_select_bedroom estimate_select_item">
                     <select name="bedroom" id="select_bedroom">
@@ -35,8 +36,8 @@
                 </div>
             </div>
             <div class="estimate_input">
-                <x-input-label id="user_zip" type="number" name="user_zip">ZIP Code</x-input-label>
-                <x-input-label id="user_email" type="email" name="user_email">Email</x-input-label>
+                <x-input-label id="zip" type="number" name="user_zip">ZIP Code</x-input-label>
+                <x-input-label id="email" type="email" name="user_email">Email</x-input-label>
             </div>
             <div class="estimate_button">
                 <input type="submit" value="Continue">
