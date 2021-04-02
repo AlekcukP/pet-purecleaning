@@ -6,8 +6,9 @@
         <div class="estimate_header">
             <h1>Get an estimate for home cleaning</h1>
         </div>
-        <form class="estimate_forms" action="/step/basic" method="POST">
-            {{ csrf_field() }}
+        <form class="estimate_forms" action="/" method="POST">
+            @csrf
+
             <div class="estimate_select">
                 <div class="estimate_select_bedroom estimate_select_item">
                     <select name="bedroom" id="select_bedroom">
@@ -18,6 +19,9 @@
                         <option value="4">4 Bedroom</option>
                         <option value="5">5+ Bedroom</option>
                     </select>
+                    @error('bedroom')
+                        <span class="error">{{ $message }}</span>
+                    @enderror
                 </div>
                 <div class="estimate_select_bathroom estimate_select_item">
                     <select name="bathroom" id="select_bathroom">
@@ -33,32 +37,18 @@
                         <option value="4.5">4.5 Bathroom</option>
                         <option value="5">5+ Bathroom</option>
                     </select>
+                    @error('bathroom')
+                        <span class="error">{{ $message }}</span>
+                    @enderror
                 </div>
             </div>
             <div class="estimate_input">
-                <x-input-label id="zip" type="number" name="user_zip">ZIP Code</x-input-label>
-                <x-input-label id="email" type="email" name="user_email">Email</x-input-label>
+                <x-input-label id="zip"  name="zip" type="number">ZIP Code</x-input-label>
+                <x-input-label id="email"  name="email" type="email">Email</x-input-label>
             </div>
             <div class="estimate_button">
                 <input type="submit" value="Continue">
             </div>
         </form>
     </section>
-
-        <!-- <section class="achivments">
-            <div class="achivments_benefits">
-                <ul class="achivments_benefits_list">
-                    <li>Experienced and vetted professionals</li>
-                    <li>Flexible cleaning schedule</li>
-                    <li>Cleaning supplies included</li>
-                </ul>
-            </div>
-            <div class="achivments_rated">
-                <h3 class="achivments_rated_header">Our services are being rated</h3>
-                <ul class="achivments_rated_list">
-                    <li><span>Grade</span>on <img src="#" alt="Angies list"></li>
-                    <li><span>Stars</span>on <img src="#" alt="Yelp"></li>
-                </ul>
-            </div>
-        </section> -->
 @endsection

@@ -7,14 +7,16 @@ use Illuminate\View\Component;
 class InputLabel extends Component
 {
     public $id;
+    public $name;
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct($id)
+    public function __construct($id, $name)
     {
         $this->id = $id;
+        $this->name = $name;
     }
 
     /**

@@ -4,6 +4,7 @@
 @section('step_description', 'This information will be used to prepare for a cleaning')
 @section('form_id', 'form_step_three')
 @section('steps_left', '1 steps left')
+@section('form_action', '/materials')
 
 @section('step_content')
 
@@ -21,6 +22,10 @@
             <x-checkbox name="flooring_types[]" id="type_tile" value="tile">Tile</x-checkbox>
             <x-checkbox name="flooring_types[]" id="type_laminate" value="laminate">Laminate</x-checkbox>
         </div>
+
+        @error('fooring_types[]')
+            <span class="error">{{ $message }}</span>
+        @enderror
     </x-block-item>
 
     <x-block-item question="What types of countertops in your home?" description="Check all that apply" fieldset-class="checkbox_forms">
@@ -36,26 +41,46 @@
             <x-checkbox name="countertops_types[]" id="type_stone" value="stone">Paper stone</x-checkbox>
             <x-checkbox name="countertops_types[]" id="type_block" value="block">Butcherblock</x-checkbox>
         </div>
+
+        @error('countertops_types[]')
+            <span class="error">{{ $message }}</span>
+        @enderror
     </x-block-item>
 
     <x-block-item question="Are there stainless steel appliances?">
         <x-radio-round id="appliences_yes" name="stainless_appliances" value="1">Yes</x-radio-round>
         <x-radio-round id="appliences_no" name="stainless_appliances" value="0">No</x-radio-round>
+
+        @error('stainless_appliances')
+            <span class="error">{{ $message }}</span>
+        @enderror
     </x-block-item>
 
     <x-block-item question="What type of stove you use?">
         <x-radio-round id="stove_gas" name="stove_type" value="gas">Gas</x-radio-round>
         <x-radio-round id="stove_electric" name="stove_type" value="electric">Electric</x-radio-round>
+
+        @error('stove_type')
+            <span class="error">{{ $message }}</span>
+        @enderror
     </x-block-item>
 
     <x-block-item question="Are shower doors made of glass?">
         <x-radio-round id="shower_yes" name="shower_glass" value="1">Yes</x-radio-round>
         <x-radio-round id="shower_no" name="shower_glass" value="0">No</x-radio-round>
+
+        @error('shower_glass')
+            <span class="error">{{ $message }}</span>
+        @enderror
     </x-block-item>
 
     <x-block-item question="Any mold or mildew issues?">
         <x-radio-round id="issues_yes" name="issues" value="1">Yes</x-radio-round>
         <x-radio-round id="issues_no" name="issues" value="0">No</x-radio-round>
+
+        @error('issues')
+            <span class="error">{{ $message }}</span>
+        @enderror
     </x-block-item>
 
 </x-base-block>

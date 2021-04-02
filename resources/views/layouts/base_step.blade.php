@@ -17,7 +17,8 @@
                     </p>
                 </div>
         </article>
-        <form class="step_content" action=""  method="post" id="@yield('form_id')">
+        <form class="step_content" action="@yield('form_action')"  method="post" id="@yield('form_id')">
+            @csrf
         @section('step_content')
         @show
         </form>

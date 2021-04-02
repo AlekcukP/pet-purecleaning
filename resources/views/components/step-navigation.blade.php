@@ -8,7 +8,7 @@
             @endif
             @if($stepsStatus['one'] == 'done')
             <li class="steps_nav_item steps_nav_done">
-                <a href="/step-one"><span>Personal info</span></a>
+                <a href="{{ route('personal') }}"><span>Personal info</span></a>
             </li>
             @endif
 
@@ -24,7 +24,7 @@
             @endif
             @if($stepsStatus['two'] == 'done')
             <li class="steps_nav_item steps_nav_done">
-                <a href="/step-two"><span>Your home</span></a>
+                <a href="{{ route('home') }}"><span>Your home</span></a>
             </li>
             @endif
 
@@ -40,7 +40,7 @@
             @endif
             @if($stepsStatus['three'] == 'done')
             <li class="steps_nav_item steps_nav_done">
-                <a href="/step-three"><span>Materials</span></a>
+                <a href="{{ route('materials') }}"><span>Materials</span></a>
             </li>
             @endif
 
@@ -56,7 +56,7 @@
             @endif
             @if($stepsStatus['four'] == 'done')
             <li class="steps_nav_item steps_nav_done">
-                <a href="/step-four"><span>Extras</span></a>
+                <a href="{{ route('extras') }}"><span>Extras</span></a>
             </li>
             @endif
 

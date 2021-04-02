@@ -30,7 +30,7 @@ class CreateOrdersTable extends Migration
             $table->string('pets', 4);
             $table->tinyInteger('pets_total');
             $table->tinyInteger('adults');
-            $table->tinyInteger('children');
+            $table->tinyInteger('child');
             $table->tinyInteger('cleanliness');
             $table->boolean('previous_clean');
             $table->string('previous_different', 1000)->nullable();
@@ -41,7 +41,7 @@ class CreateOrdersTable extends Migration
             $table->string('stove_type', 10);
             $table->boolean('shower_glass');
             $table->string('special_attention', 1000)->nullable();
-            $table->string('else_info', 1000)->nullable();
+            $table->string('else_info', 1000)->nspecial_attentionullable();
             //Extras
             $table->boolean('extra_fridge')->nullable();
             $table->boolean('extra_oven')->nullable();

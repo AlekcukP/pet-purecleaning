@@ -4,6 +4,7 @@
 @section('step_description', 'At the end of the quote you will get a price for cleaning')
 @section('form_id', 'form_step_one')
 @section('steps_left', '3 steps left')
+@section('form_action', '/personal')
 
 @section('step_content')
 
@@ -13,6 +14,10 @@
         <x-radio-button id="frequency_weekly" name="cleaning_frequency" type="radio" value="weekly">Weekly</x-radio-button>
         <x-radio-button id="frequency_biweekly" name="cleaning_frequency" type="radio" value="biweekly">Bi-weekly</x-radio-button>
         <x-radio-button id="frequency_monthly" name="cleaning_frequency" type="radio" value="monthly">Monthly</x-radio-button>
+
+        @error('cleaning_frequency')
+            <span class="error">{{ $message }}</span>
+        @enderror
     </x-block-item>
 </x-base-block>
 
@@ -22,6 +27,10 @@
         <x-radio-button id="type_movein" name="cleaning_type" value="movein">Move In</x-radio-button>
         <x-radio-button id="type_moveout" name="cleaning_type" value="moveout">Move Out</x-radio-button>
         <x-radio-button id="type_remodeling" name="cleaning_type" value="remodeling">Post Remodeling</x-radio-button>
+
+        @error('cleaning_type')
+            <span class="error">{{ $message }}</span>
+        @enderror
     </x-block-item>
 </x-base-block>
 
@@ -33,6 +42,10 @@
         <x-radio-button id="date_this_month" name="cleaning_date" value="this_month">This month</x-radio-button>
         <x-radio-button id="date_flexible" name="cleaning_date" value="flexible">I am flexible</x-radio-button>
         <x-radio-button id="date_qoute" name="cleaning_date" value="qoute">I just need a quote</x-radio-button>
+
+        @error('cleaning_date')
+            <span class="error">{{ $message }}</span>
+        @enderror
     </x-block-item>
 </x-base-block>
 
@@ -65,6 +78,10 @@
                         <option value="Facebook">Facebook</option>
                         <option value="Other">Other</option>
                     </select>
+
+                    @error('referral')
+                        <span class="error">{{ $message }}</span>
+                    @enderror
             </div>
         </div>
     </x-block-item>
