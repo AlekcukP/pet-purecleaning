@@ -2,9 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StepRequest;
-use App\Models\Order;
-use App\Models\User;
+use App\Http\Requests\BasicRequest;
+use App\Http\Requests\PersonalRequest;
 
 class Step extends Controller
 {
@@ -40,8 +39,16 @@ class Step extends Controller
         return view('personal');
     }
 
-    function save(StepRequest $request)
+    function save(BasicRequest $request)
     {
+        // redirect()->route('personal');
         $data = $request->all();
+        dd($data);
+    }
+    function savePersonal(PersonalRequest $request)
+    {
+        // redirect()->route('personal');
+        $data = $request->all();
+        dd($data);
     }
 }
