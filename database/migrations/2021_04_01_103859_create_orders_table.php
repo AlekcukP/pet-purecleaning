@@ -17,31 +17,31 @@ class CreateOrdersTable extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained('users');
             //Personal info
-            $table->string('address', 200);
+            $table->string('address', 200)->nullable();
             $table->integer('apt')->nullable();
-            $table->string('city', 50);
-            $table->integer('footage');
+            $table->string('city', 50)->nullable();
+            $table->integer('footage')->nullable();
             $table->tinyInteger('bedrooms');
             $table->tinyInteger('bathrooms');
-            $table->string('cleaning_frequency', 15);
-            $table->string('cleaning_type', 30);
-            $table->string('cleaning_date', 30);
+            $table->string('cleaning_frequency', 15)->nullable();
+            $table->string('cleaning_type', 30)->nullable();
+            $table->string('cleaning_date', 30)->nullable();
             //Your home
-            $table->string('pets', 4);
-            $table->tinyInteger('pets_total');
-            $table->tinyInteger('adults');
-            $table->tinyInteger('child');
-            $table->tinyInteger('cleanliness');
-            $table->boolean('previous_clean');
+            $table->string('pets', 4)->nullable();
+            $table->tinyInteger('pets_total')->nullable();
+            $table->tinyInteger('adults')->nullable();
+            $table->tinyInteger('child')->nullable();
+            $table->tinyInteger('cleanliness')->nullable();
+            $table->boolean('previous_clean')->nullable();
             $table->string('previous_different', 1000)->nullable();
             //Materials
-            $table->string('flooring_types', 200);
-            $table->string('countertops_types', 200);
-            $table->boolean('stainless_appliances');
-            $table->string('stove_type', 10);
-            $table->boolean('shower_glass');
+            $table->string('flooring_types', 200)->nullable();
+            $table->string('countertops_types', 200)->nullable();
+            $table->boolean('stainless_appliances')->nullable();
+            $table->string('stove_type', 10)->nullable();
+            $table->boolean('shower_glass')->nullable();
             $table->string('special_attention', 1000)->nullable();
-            $table->string('else_info', 1000)->nspecial_attentionullable();
+            $table->string('else_info', 1000)->nullable();
             //Extras
             $table->boolean('extra_fridge')->nullable();
             $table->boolean('extra_oven')->nullable();

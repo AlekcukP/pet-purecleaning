@@ -2,6 +2,7 @@
 
 namespace App\View\Components;
 
+use Illuminate\Support\Facades\Session;
 use Illuminate\View\Component;
 
 class StepNavigation extends Component
@@ -13,15 +14,11 @@ class StepNavigation extends Component
      *
      * @return void
      */
-    public function __construct($stepsStatus = array(
-        'one'=>'done',
-        'two'=>'done',
-        'three'=>'done',
-        'four'=>'done'
-        )
-    )
-    {
-        $this->stepsStatus = $stepsStatus;
+    public function __construct() {
+        $this->stepsStatus['home'] = Session::get('home');
+        $this->stepsStatus['personal'] = Session::get('personal');
+        $this->stepsStatus['materials'] = Session::get('materials');
+        $this->stepsStatus['extras'] = Session::get('extras');
     }
 
     /**

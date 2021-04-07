@@ -1,60 +1,60 @@
 <nav class="steps_nav">
     <ul class="steps_nav_list">
 
-            @if($stepsStatus['one'] == 'current')
+            @if($stepsStatus['personal'] == 'current')
             <li class="steps_nav_item steps_nav_current">
                 <span>Personal info</span>
             </li>
             @endif
-            @if($stepsStatus['one'] == 'done')
+            @if($stepsStatus['personal'] == 'done')
             <li class="steps_nav_item steps_nav_done">
                 <a href="{{ route('personal') }}"><span>Personal info</span></a>
             </li>
             @endif
 
-            @if($stepsStatus['two'] == 'current')
+            @if($stepsStatus['home'] == 'current')
             <li class="steps_nav_item steps_nav_current">
                 <span>Your home</span>
             </li>
             @endif
-            @if($stepsStatus['two'] == 'blocked')
+            @if($stepsStatus['home'] == 'blocked')
             <li class="steps_nav_item steps_nav_blocked">
                 <span>Your home</span>
             </li>
             @endif
-            @if($stepsStatus['two'] == 'done')
+            @if($stepsStatus['home'] == 'done')
             <li class="steps_nav_item steps_nav_done">
                 <a href="{{ route('home') }}"><span>Your home</span></a>
             </li>
             @endif
 
-            @if($stepsStatus['three'] == 'current')
+            @if($stepsStatus['materials'] == 'current')
             <li class="steps_nav_item steps_nav_current">
                 <span>Materials</span>
             </li>
             @endif
-            @if($stepsStatus['three'] == 'blocked')
+            @if($stepsStatus['materials'] == 'blocked')
             <li class="steps_nav_item steps_nav_blocked">
                 <span>Materials</span>
             </li>
             @endif
-            @if($stepsStatus['three'] == 'done')
+            @if($stepsStatus['materials'] == 'done')
             <li class="steps_nav_item steps_nav_done">
                 <a href="{{ route('materials') }}"><span>Materials</span></a>
             </li>
             @endif
 
-            @if($stepsStatus['four'] == 'current')
+            @if($stepsStatus['extras'] == 'current')
             <li class="steps_nav_item steps_nav_current">
                 <span>Extras</span>
             </li>
             @endif
-            @if($stepsStatus['four'] == 'blocked')
+            @if($stepsStatus['extras'] == 'blocked')
             <li class="steps_nav_item steps_nav_blocked">
                 <span>Extras</span>
             </li>
             @endif
-            @if($stepsStatus['four'] == 'done')
+            @if($stepsStatus['extras'] == 'done')
             <li class="steps_nav_item steps_nav_done">
                 <a href="{{ route('extras') }}"><span>Extras</span></a>
             </li>

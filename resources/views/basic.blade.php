@@ -11,7 +11,7 @@
 
             <div class="estimate_select">
                 <div class="estimate_select_bedroom estimate_select_item">
-                    <select name="bedroom" id="select_bedroom">
+                    <select name="bedrooms" id="select_bedroom">
                         <option value="">Bedrooms's amount</option>
                         <option value="1">1 Bedroom</option>
                         <option value="2">2 Bedroom</option>
@@ -24,7 +24,7 @@
                     @enderror
                 </div>
                 <div class="estimate_select_bathroom estimate_select_item">
-                    <select name="bathroom" id="select_bathroom">
+                    <select name="bathrooms" id="select_bathroom">
                         <option value="">Bathrooms's amount</option>
                         <option value=".5">0.5 Bathroom</option>
                         <option value="1">1 Bathroom</option>

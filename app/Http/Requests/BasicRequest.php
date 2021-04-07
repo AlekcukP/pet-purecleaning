@@ -25,16 +25,16 @@ class BasicRequest extends FormRequest
     {
         return [
             'zip' => ['required', 'numeric'],
-            'bedroom' => ['required', 'numeric'],
-            'bathroom' => ['required', 'numeric'],
+            'bedrooms' => ['required', 'numeric'],
+            'bathrooms' => ['required', 'numeric'],
             'email' => ['required', 'email:rfc,dns'],
         ];
     }
     public function messages()
     {
         return [
-            'bedroom.required' => 'Pick bedrooms amount.',
-            'bathroom.required' => 'Pick bathrooms amount.',
+            'bedrooms.required' => 'Pick bedrooms amount.',
+            'bathrooms.required' => 'Pick bathrooms amount.',
             'zip.required' => 'Enter your ZIP code.',
             'email.required' => 'Enter your email address.',
         ];

@@ -34,7 +34,7 @@ class PersonalRequest extends FormRequest
             'cleaning_frequency' => ['required', 'string'],
             'cleaning_type' => ['required', 'string'],
             'cleaning_date' => ['required', 'string'],
-            'apt' => ['numeric'],
+            // 'apt' => ['numeric'],
         ];
     }
 }
