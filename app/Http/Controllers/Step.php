@@ -35,7 +35,10 @@ class Step extends Controller
 
     function extras()
     {
-        return view('extras');
+        return view('extras', [
+            'price' => $this->getPrice(),
+            'details' => $this->getOrderDetails()
+        ]);
     }
 
     function personal()
@@ -43,10 +46,25 @@ class Step extends Controller
         return view('personal');
     }
 
+    function getPrice()
+    {
+        return $this->service->countPrice();
+    }
+
+    function getOrderDetails()
+    {
+        return $this->service->getOrderDetails();
+    }
+
     function saveBasic(BasicRequest $request)
     {
         $data = $request->input();
-        $this->service->create($data);
+        $this->service->init($data);
+
+        Session::put('personal', 'current');
+        Session::put('home', 'blocked');
+        Session::put('materials', 'blocked');
+        Session::put('extras', 'blocked');
 
         return redirect()->route('personal');
     }
@@ -83,4 +101,5 @@ class Step extends Controller
 
         return redirect()->route('extras');
     }
+
 }

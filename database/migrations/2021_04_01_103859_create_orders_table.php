@@ -22,7 +22,7 @@ class CreateOrdersTable extends Migration
             $table->string('city', 50)->nullable();
             $table->integer('footage')->nullable();
             $table->tinyInteger('bedrooms');
-            $table->tinyInteger('bathrooms');
+            $table->float('bathrooms');
             $table->string('cleaning_frequency', 15)->nullable();
             $table->string('cleaning_type', 30)->nullable();
             $table->string('cleaning_date', 30)->nullable();
@@ -43,11 +43,11 @@ class CreateOrdersTable extends Migration
             $table->string('special_attention', 1000)->nullable();
             $table->string('else_info', 1000)->nullable();
             //Extras
-            $table->boolean('extra_fridge')->nullable();
-            $table->boolean('extra_oven')->nullable();
-            $table->boolean('extra_garage')->nullable();
-            $table->boolean('extra_laundary')->nullable();
-            $table->boolean('extra_blinds')->nullable();
+            $table->boolean('extra_fridge')->default(0);
+            $table->boolean('extra_oven')->default(0);
+            $table->boolean('extra_garage')->default(0);
+            $table->boolean('extra_laundary')->default(0);
+            $table->boolean('extra_blinds')->default(0);
             //
             $table->timestamps();
         });

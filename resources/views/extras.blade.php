@@ -9,20 +9,47 @@
 @section('step_content')
 <x-base-block>
     <x-block-item question="Select extras">
-        <x-input-icon custom-class="icon_fridge" id="extra_fridge" name="extras" value="fridge">Inside fridge</x-input-icon>
-        <x-input-icon custom-class="icon_oven" id="extra_oven" name="extras" value="oven">Inside oven</x-input-icon>
-        <x-input-icon custom-class="icon_garage" id="extra_garage" name="extras" value="garage">Garage swapt</x-input-icon>
-        <x-input-icon custom-class="icon_laundary" id="extra_laundary" name="extras" value="laundary">Laundary Wash & Dry</x-input-icon>
-        <x-input-icon custom-class="icon_blinds" id="extra_blinds" name="extras" value="blinds">Blinds Cleaning</x-input-icon>
+        <x-input-icon custom-class="icon_fridge" id="extra_fridge" name="extra_fridge" value="1">Inside fridge</x-input-icon>
+        <x-input-icon custom-class="icon_oven" id="extra_oven" name="extra_oven" value="1">Inside oven</x-input-icon>
+        <x-input-icon custom-class="icon_garage" id="extra_garage" name="extra_garage" value="1">Garage swapt</x-input-icon>
+        <x-input-icon custom-class="icon_laundary" id="extra_laundary" name="extra_laundary" value="1">Laundary Wash & Dry</x-input-icon>
+        <x-input-icon custom-class="icon_blinds" id="extra_blinds" name="extra_blinds" value="1">Blinds Cleaning</x-input-icon>
     </x-block-item>
 </x-base-block>
-<div class="price">
-    <table class="price_table">
-            <tr><td>Cleaning price</td></tr>
-            <tr><td>Cleaning regularity</td></tr>
-            <tr><td>Check</td></tr>
-            <tr><td>Total</td></tr>
 
-    </table>
+<div class="price">
+        <div class="price_header price_block">
+            <span>Cleaning price</span>
+        </div>
+        <div class="price_detail price_block">
+            <div>
+                <span>{{ $details['cleaning_frequency'] }} </span><span>Cleaning</span>
+            </div>
+            <div>
+                <span>{{ $details['cleaning_date'] }}</span>
+            </div>
+            <div>
+                <span>{{ $details['bedrooms'] }}</span> bed, 
+                <span>{{ $details['bathrooms'] }}</span> bath - 
+                <span>{{ $details['footage'] }}</span> sq ft.
+            </div>
+        </div>
+        <div class="price_check price_block">
+            <div>
+                <span>{{ $details['cleaning_frequency'] }} </span><span>Cleaning</span>
+            </div>
+            <div>
+                <span>$</span><span>{{ $price }}</span>
+            </div>
+        </div>
+        <div class="price_total price_block">
+            <div>
+                <span>Total</span>
+            </div>
+            <div class="price_cost">
+                <span class="price_dollar">$</span><span>{{ $price }}</span>
+            </div>
+        </div>
 </div>
+
 @endsection

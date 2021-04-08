@@ -31,9 +31,9 @@ class MaterialsRequest extends FormRequest
             'flooring_types.*' => ['string'],
             'countertops_types' => ['array'],
             'countertops_types.*' => ['string'],
-            'stainless_appliances' => ['boolean'],
-            'special_attention' => ['string'],
-            'else_info' => ['string'],
+            'stainless_appliances' => ['required', 'boolean'],
+            // 'special_attention' => ['string'],
+            // 'else_info' => ['string'],
         ];
     }
 }

@@ -10,10 +10,10 @@
 
 <x-base-block block-name="Cleaning frequency">
     <x-block-item question="How often would you like us to come?" description="You can always change frequencies, reschedule, or save cleanings for later!">
-        <x-radio-button id="frequency_once" name="cleaning_frequency" type="radio" value="once">Once</x-radio-button>
-        <x-radio-button id="frequency_weekly" name="cleaning_frequency" type="radio" value="weekly">Weekly</x-radio-button>
-        <x-radio-button id="frequency_biweekly" name="cleaning_frequency" type="radio" value="biweekly">Bi-weekly</x-radio-button>
-        <x-radio-button id="frequency_monthly" name="cleaning_frequency" type="radio" value="monthly">Monthly</x-radio-button>
+        <x-radio-button id="frequency_once" name="cleaning_frequency" type="radio" value="Once-Time">Once</x-radio-button>
+        <x-radio-button id="frequency_weekly" name="cleaning_frequency" type="radio" value="Weekly">Weekly</x-radio-button>
+        <x-radio-button id="frequency_biweekly" name="cleaning_frequency" type="radio" value="Bi-weekly">Bi-weekly</x-radio-button>
+        <x-radio-button id="frequency_monthly" name="cleaning_frequency" type="radio" value="Monthly">Monthly</x-radio-button>
 
         @error('cleaning_frequency')
             <span class="error">{{ $message }}</span>
@@ -23,10 +23,10 @@
 
 <x-base-block block-name="Cleaning type">
     <x-block-item question="What type ofcleaning">
-        <x-radio-button id="type_deep" name="cleaning_type" value="deep">Deep or Spring</x-radio-button>
-        <x-radio-button id="type_movein" name="cleaning_type" value="movein">Move In</x-radio-button>
-        <x-radio-button id="type_moveout" name="cleaning_type" value="moveout">Move Out</x-radio-button>
-        <x-radio-button id="type_remodeling" name="cleaning_type" value="remodeling">Post Remodeling</x-radio-button>
+        <x-radio-button id="type_deep" name="cleaning_type" value="Deep">Deep or Spring</x-radio-button>
+        <x-radio-button id="type_movein" name="cleaning_type" value="Move In">Move In</x-radio-button>
+        <x-radio-button id="type_moveout" name="cleaning_type" value="Move Out">Move Out</x-radio-button>
+        <x-radio-button id="type_remodeling" name="cleaning_type" value="Post Remodeling">Post Remodeling</x-radio-button>
 
         @error('cleaning_type')
             <span class="error">{{ $message }}</span>
@@ -36,12 +36,12 @@
 
 <x-base-block block-name="Cleaning date">
     <x-block-item question="When will you need us?">
-        <x-radio-button id="date_next_available" name="cleaning_date" value="next_available">Next available</x-radio-button>
-        <x-radio-button id="date_this_week" name="cleaning_date" value="this_week">This week</x-radio-button>
-        <x-radio-button id="date_next_week" name="cleaning_date" value="next_week">Next week</x-radio-button>
-        <x-radio-button id="date_this_month" name="cleaning_date" value="this_month">This month</x-radio-button>
-        <x-radio-button id="date_flexible" name="cleaning_date" value="flexible">I am flexible</x-radio-button>
-        <x-radio-button id="date_qoute" name="cleaning_date" value="qoute">I just need a quote</x-radio-button>
+        <x-radio-button id="date_next_available" name="cleaning_date" value="Next available">Next available</x-radio-button>
+        <x-radio-button id="date_this_week" name="cleaning_date" value="This week">This week</x-radio-button>
+        <x-radio-button id="date_next_week" name="cleaning_date" value="Next week">Next week</x-radio-button>
+        <x-radio-button id="date_this_month" name="cleaning_date" value="This month">This month</x-radio-button>
+        <x-radio-button id="date_flexible" name="cleaning_date" value="Flexible">I am flexible</x-radio-button>
+        <x-radio-button id="date_qoute" name="cleaning_date" value="Quote">I just need a quote</x-radio-button>
 
         @error('cleaning_date')
             <span class="error">{{ $message }}</span>

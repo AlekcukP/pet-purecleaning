@@ -1,0 +1,62 @@
+.price{
+    width: 300px;
+    position: absolute;
+    top: 33%;
+    right: 16%;
+
+    &_block{
+        border: $border;
+        padding: 15px 20px;
+        border-bottom: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-flow: column;
+    }
+
+    &_header{
+        background-color: $grey;
+        color: $text-grey;
+        text-transform: uppercase;
+    }
+
+    &_detail{
+
+        flex-flow: column;
+
+        & div{
+            padding: 5px 0;
+            font-size: 12px;
+        }
+        & div:first-child{
+            padding: 10px 0px 15px 0px;
+            color: #000;
+            font-size: 16px;
+        }
+    }
+
+    &_check{
+        flex-flow: row;
+        justify-content: space-between;
+        font-size: 14px;
+    }
+    &_total{
+        flex-flow: row;
+        justify-content: space-between;
+        text-transform: uppercase;
+    }
+    &_cost{
+        font-size: 22px;
+        color: $blue;
+    }
+    &_dollar{
+        font-size: 16px;
+        position: relative;
+        top: -5px;
+        left: -2px;
+    }
+}
+
+.price_block:last-child{
+    border-bottom: $border;
+}

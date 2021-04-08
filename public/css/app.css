@@ -678,3 +678,60 @@ label[for=photos_input]::before {
   background-image: url(/images/window.svg?25698e2d74b89f92572fed662b0ae6fe);
 }
 
+.price {
+  width: 300px;
+  position: absolute;
+  top: 33%;
+  right: 16%;
+}
+.price_block {
+  border: 2px solid #ebebeb;
+  padding: 15px 20px;
+  border-bottom: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+}
+.price_header {
+  background-color: #ebebeb;
+  color: #929191;
+  text-transform: uppercase;
+}
+.price_detail {
+  flex-flow: column;
+}
+.price_detail div {
+  padding: 5px 0;
+  font-size: 12px;
+}
+.price_detail div:first-child {
+  padding: 10px 0px 15px 0px;
+  color: #000;
+  font-size: 16px;
+}
+.price_check {
+  flex-flow: row;
+  justify-content: space-between;
+  font-size: 14px;
+}
+.price_total {
+  flex-flow: row;
+  justify-content: space-between;
+  text-transform: uppercase;
+}
+.price_cost {
+  font-size: 22px;
+  color: #03a9f4;
+}
+.price_dollar {
+  font-size: 16px;
+  position: relative;
+  top: -5px;
+  left: -2px;
+}
+
+.price_block:last-child {
+  border-bottom: 2px solid #ebebeb;
+}
+
