@@ -20,6 +20,10 @@ class CreatePricesTable extends Migration
             $table->float('movein_type_coef');
             $table->float('moveout_type_coef');
             $table->float('remodeling_type_coef');
+
+            $table->float('weekly_coef');
+            $table->float('biweekly_coef');
+
             $table->tinyInteger('extra_fridge');
             $table->tinyInteger('extra_oven');
             $table->tinyInteger('extra_garage');

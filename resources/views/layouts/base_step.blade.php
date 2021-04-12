@@ -23,7 +23,7 @@
         @show
         </form>
         <div class="step_button">
-            <button type="submit" form="@yield('form_id')">@yield('steps_left')</button>
+            <button type="submit" id="@yield('button_id')" form="@yield('form_id')">@yield('steps_left')</button>
         </div>
     </section>
 @endsection

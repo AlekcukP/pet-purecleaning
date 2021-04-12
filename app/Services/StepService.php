@@ -104,33 +104,106 @@ class StepService extends Service
         ]);
     }
 
-    public function countPrice()
+    public function saveExtras($data)
+    {
+        Order::where('id', $this->getOrderId())->update([
+            $data['name'] => $data['value']
+        ]);
+    }
+
+    public function createPriceCheck()
     {
         $order = Order::find($this->getOrderId());
         $priceList = Price::find(1);
 
-        $coef = 1;
+        $type_coef = 1;
+        $frequency_coef = 1;
 
         switch ($order->cleaning_type) {
-            case 'Move In': $coef = $priceList->movein_type_coef;
+            case 'Move In': $type_coef = $priceList->movein_type_coef;
             break;
-            case 'Move Out': $coef = $priceList->moveout_type_coef;
+            case 'Move Out': $type_coef = $priceList->moveout_type_coef;
             break;
-            case 'Deep': $coef = $priceList->deep_type_coef;
+            case 'Deep': $type_coef = $priceList->deep_type_coef;
             break;
-            case 'Post Remodeling': $coef = $priceList->remodeling_type_coef;
+            case 'Post Remodeling': $type_coef = $priceList->remodeling_type_coef;
+            break;
+        }
+        switch ($order->cleaning_frequency) {
+            case 'Monthly': $frequency_coef = $priceList->weekly_coef;
+            break;
+            case 'Bi-weekly': $frequency_coef =  $priceList->biweekly_coef;
             break;
         }
 
-        $price = $order->footage * $priceList->price_per_footage * $coef;
+        $price = $order->footage * $priceList->price_per_footage * $type_coef * $frequency_coef;
 
-        $order->extra_fridge ? $price + $priceList->extra_fridge : '';
-        $order->extra_oven ? $price + $priceList->extra_oven : '';
-        $order->extra_garage ? $price + $priceList->extra_garage : '';
-        $order->extra_laundary ? $price + $priceList->extra_laundary : '';
-        $order->extra_blinds ? $price + $priceList->extra_blinds : '';
+        $priceWithExtras = $price;
+        $extras = [];
 
-        return $price;
+        if ($order->extra_fridge) {
+            $priceWithExtras += $priceList->extra_fridge;
+            array_push(
+                $extras,
+                [
+                    'name'=> 'Inside Fridge',
+                    'cost' => $priceList->extra_fridge
+                ]
+            );
+        }
+        if ($order->extra_oven) {
+            $priceWithExtras += $priceList->extra_oven;
+            array_push(
+                $extras,
+                [
+                    'name'=> 'Inside Oven',
+                    'cost' => $priceList->extra_oven
+                ]
+            );
+        }
+        if ($order->extra_garage) {
+            $priceWithExtras += $priceList->extra_garage;
+            array_push(
+                $extras,
+                [
+                    'name'=> 'Garage swept',
+                    'cost' => $priceList->extra_garage
+                ]
+            );
+        }
+        if ($order->extra_laundary) {
+            $priceWithExtras += $priceList->extra_laundary;
+            array_push(
+                $extras,
+                [
+                    'name'=> 'Inside Oven',
+                    'cost' => $priceList->extra_laundary
+                ]
+            );
+        }
+        if ($order->extra_blinds) {
+            $priceWithExtras += $priceList->extra_blinds;
+            array_push(
+                $extras,
+                [
+                    'name'=> 'Blinds cleaning',
+                    'cost' => $priceList->extra_blinds
+                ]
+            );
+        }
+
+        return [
+            'total_price' => $priceWithExtras,
+            'per_cleaning'=>$price,
+            'extras' => $extras
+        ];
+    }
+
+    public function getIntent()
+    {
+        $user = new User();
+
+        return $user->createSetupIntent();
     }
 
     public function getOrderDetails()

@@ -12,20 +12,20 @@
             <div class="estimate_select">
                 <div class="estimate_select_bedroom estimate_select_item">
                     <select name="bedrooms" id="select_bedroom">
-                        <option value="">Bedrooms's amount</option>
+                        <option value="">Bedrooms' amount</option>
                         <option value="1">1 Bedroom</option>
                         <option value="2">2 Bedroom</option>
                         <option value="3">3 Bedroom</option>
                         <option value="4">4 Bedroom</option>
                         <option value="5">5+ Bedroom</option>
                     </select>
-                    @error('bedroom')
+                    @error('bedrooms')
                         <span class="error">{{ $message }}</span>
                     @enderror
                 </div>
                 <div class="estimate_select_bathroom estimate_select_item">
                     <select name="bathrooms" id="select_bathroom">
-                        <option value="">Bathrooms's amount</option>
+                        <option value="">Bathrooms' amount</option>
                         <option value=".5">0.5 Bathroom</option>
                         <option value="1">1 Bathroom</option>
                         <option value="1.5">1.5 Bathroom</option>
@@ -37,7 +37,7 @@
                         <option value="4.5">4.5 Bathroom</option>
                         <option value="5">5+ Bathroom</option>
                     </select>
-                    @error('bathroom')
+                    @error('bathrooms')
                         <span class="error">{{ $message }}</span>
                     @enderror
                 </div>

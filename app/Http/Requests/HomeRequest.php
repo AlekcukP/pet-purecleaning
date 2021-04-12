@@ -30,7 +30,7 @@ class HomeRequest extends FormRequest
             'child' => ['required', 'numeric'],
             'cleanliness' => ['required', 'numeric'],
             'previous_clean' => ['required', 'boolean'],
-            'previous_different' => ['string'],
+            // 'previous_different' => ['string'],
         ];
     }
 }

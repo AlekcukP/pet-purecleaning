@@ -26,6 +26,8 @@ class PriceTableSeeder extends Seeder
             'extra_garage'=> 20,
             'extra_laundary'=> 20,
             'extra_blinds'=> 20,
+            'weekly_coef'=>0.8,
+            'biweekly_coef'=>0.95
         ]);
     }
 }

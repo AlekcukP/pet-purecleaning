@@ -17,7 +17,7 @@ class CheckSession
      */
     public function handle(Request $request, Closure $next)
     {
-        if (!Session::get('id')) {
+        if (!Session::get('userId')) {
             return redirect('/');
         }
 

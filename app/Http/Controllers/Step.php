@@ -7,6 +7,7 @@ use App\Http\Requests\HomeRequest;
 use App\Http\Requests\MaterialsRequest;
 use App\Http\Requests\PersonalRequest;
 use App\Services\StepService;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 
 class Step extends Controller
@@ -18,45 +19,41 @@ class Step extends Controller
         $this->service = new StepService();
     }
 
-    function basic()
+    public function basic()
     {
         return view('basic');
     }
 
-    function materials()
+    public function materials()
     {
         return view('materials');
     }
 
-    function home()
+    public function home()
     {
         return view('home');
     }
 
-    function extras()
+    public function extras()
     {
         return view('extras', [
             'price' => $this->getPrice(),
-            'details' => $this->getOrderDetails()
+            'details' => $this->service->getOrderDetails(),
+            'intent' => $this->service->getIntent()
         ]);
     }
 
-    function personal()
+    public function personal()
     {
         return view('personal');
     }
 
-    function getPrice()
+    public function getPrice()
     {
-        return $this->service->countPrice();
+        return $this->service->createPriceCheck();
     }
 
-    function getOrderDetails()
-    {
-        return $this->service->getOrderDetails();
-    }
-
-    function saveBasic(BasicRequest $request)
+    public function saveBasic(BasicRequest $request)
     {
         $data = $request->input();
         $this->service->init($data);
@@ -69,7 +66,7 @@ class Step extends Controller
         return redirect()->route('personal');
     }
 
-    function savePersonal(PersonalRequest $request)
+    public function savePersonal(PersonalRequest $request)
     {
         $data = $request->input();
         $this->service->savePersonal($data);
@@ -80,7 +77,7 @@ class Step extends Controller
         return redirect()->route('home');
     }
 
-    function saveHome(HomeRequest $request)
+    public function saveHome(HomeRequest $request)
     {
         $data = $request->input();
         $this->service->saveHome($data);
@@ -91,7 +88,7 @@ class Step extends Controller
         return redirect()->route('materials');
     }
 
-    function saveMaterials(MaterialsRequest $request)
+    public function saveMaterials(MaterialsRequest $request)
     {
         $data = $request->input();
         $this->service->saveMaterials($data);
@@ -100,6 +97,16 @@ class Step extends Controller
         Session::put('extras', 'current');
 
         return redirect()->route('extras');
+    }
+
+    public function purchase()
+    {
+
+    }
+
+    public function extrasAjax(Request $request)
+    {
+        $this->service->saveExtras($request->all());
     }
 
 }

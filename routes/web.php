@@ -42,4 +42,7 @@ Route::get('extras', [Step::class, 'extras'])
     ->name('extras')
     ->middleware('session')
     ->middleware('page.status');
-// Route::post('extras', [Step::class, 'save']);
+Route::post('extras-ajax', [Step::class, 'extrasAjax']);
+Route::post('price', [Step::class, 'getPrice']);
+Route::post('checkout', [Step::class, 'purchase'])->name('checkout');
+Route::get('invoices/download', 'InvoiceController@download');

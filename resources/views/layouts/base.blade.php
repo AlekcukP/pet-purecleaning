@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/app.css">
-    <script src="js/app.js" async></script>
+    <script src="js/app.js" defer></script>
     <title>Pure House Cleaning</title>
 </head>
 <body>
@@ -31,5 +31,6 @@
         </ul>
         <p>&#169; 2021 Pure House Cleaning. All rights reserved</p>
     </footer>
+    <div id="wrapper" class="wrapper"></div>
 </body>
 </html>

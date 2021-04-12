@@ -36,9 +36,16 @@
     }
 
     &_check{
-        flex-flow: row;
+        flex-flow: column;
         justify-content: space-between;
         font-size: 14px;
+
+        &>div{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin: 5px 0;
+        }
     }
     &_total{
         flex-flow: row;
